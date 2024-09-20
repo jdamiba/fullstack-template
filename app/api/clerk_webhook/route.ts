@@ -76,7 +76,7 @@ export async function POST(req: Request) {
         }, ${last_name || null}, ${image_url || null}, to_timestamp(${
           created_at / 1000
         }), 'free')
-          ON CONFLICT (id) DO UPDATE SET
+          ON CONFLICT (user_id) DO UPDATE SET
             email = EXCLUDED.email,
             first_name = EXCLUDED.first_name,
             last_name = EXCLUDED.last_name,
