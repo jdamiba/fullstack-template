@@ -2,7 +2,7 @@ import { sql } from "@vercel/postgres";
 import { NextResponse } from "next/server";
 import { auth } from "@clerk/nextjs/server";
 
-function log(message: string, data?: any) {
+function log(message: string, data?: unknown) {
   console.log(
     `[${new Date().toISOString()}] ${message}`,
     data ? JSON.stringify(data) : ""
