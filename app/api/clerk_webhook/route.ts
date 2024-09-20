@@ -70,7 +70,7 @@ export async function POST(req: Request) {
       try {
         // Insert or update user in the database
         await sql`
-          INSERT INTO users (id, email, first_name, last_name, image_url, created_at, subscription_tier)
+          INSERT INTO users (user_id, email, first_name, last_name, image_url, created_at, subscription_tier)
           VALUES (${id}, ${primaryEmail.email_address}, ${
           first_name || null
         }, ${last_name || null}, ${image_url || null}, to_timestamp(${
