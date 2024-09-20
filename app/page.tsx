@@ -16,7 +16,7 @@ type Task = {
 type SortOption = "priority" | "created_at";
 
 export default function Home() {
-  const { isSignedIn, user } = useUser();
+  const { isSignedIn } = useUser();
   const [tasks, setTasks] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState("");
   const [sortBy, setSortBy] = useState<SortOption>("created_at");
