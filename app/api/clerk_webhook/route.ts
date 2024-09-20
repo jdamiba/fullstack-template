@@ -64,6 +64,8 @@ export async function POST(req: Request) {
       (email) => email.id === evt.data.primary_email_address_id
     );
 
+    console.log(evt.data);
+
     if (primaryEmail) {
       try {
         // Insert or update user in the database
